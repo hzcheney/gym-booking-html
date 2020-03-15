@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预约详情</title>
+    <link rel="stylesheet" href="https://cdn.ahau.cloud/my.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+
+</head>
+<!--<body >-->
+<body onload="detail()" >
+
+<div id="loginform">
+    <div class="form-group">
+        <h4>场馆:</h4>
+
+        <h4 id="vname"></h4>
+  <br>
+        <h4>预约人:</h4>
+        <h4 id="uname"></h4>
+        <br>
+        <h4>预约日期:</h4>
+        <h4 id="date"></h4>
+        <br>
+        <h4>开始时间:</h4>
+       <h4 id="time"></h4>
+        <br>
+        <h5>选择预约时长</h5>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="timeRadios" id="radios1" value="30" checked>
+            <label class="form-check-label" for="radios1">
+                30分钟
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="timeRadios" id="radios2" value="60">
+            <label class="form-check-label" for="radios2">
+                60分钟
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="timeRadios" id="radios3" value="90">
+            <label class="form-check-label" for="radios3">
+                90分钟
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="timeRadios" id="radios4" value="120">
+            <label class="form-check-label" for="radios4">
+                120分钟
+            </label>
+        </div>
+        <br>
+        <br>
+        <button id="confirm" class="btn btn-primary">确认</button>
+        <button id="giveup"   class="btn btn-outline-info" onclick="history.back()">重选</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+<script src="js/booking.js"></script>
+<script src="js/cookieandurl.js"></script>
+<!--<script src="https://cdn.ahau.cloud/booking.js"></script>-->
+<!--<script src="https://cdn.ahau.cloud/cookieandurl.js"></script>-->
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预约</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+
+</head>
+<body onload="getvenues()">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" >体育场馆预约系统</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav"  >
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        选择场馆
+                    </a>
+                    <div id="displayMenu" class="dropdown-menu" aria-labelledby="dropdownMenu2">
+
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a id="username_a" class="nav-link"  aria-disabled="true"></a>
+            </li>
+            <li class="nav-item" id="userlink_a">
+                <a class="nav-link" href="index.html" aria-disabled="true">登录</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="logout();" aria-disabled="true">退出</a>
+
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<br>
+
+<span id="title" style="text-align: center"><h2>请选择场馆</h2></span>
+<br>
+<table class="table table-bordered" style="width: 70%;margin: 0 auto">
+    <tbody id="tbody1">
+
+    </tbody>
+</table>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<!--<script src="https://cdn.ahau.cloud/main.js"></script>-->
+<script src="js/main.js"></script>
+<script src="https://cdn.ahau.cloud/cookieandurl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
