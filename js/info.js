@@ -170,53 +170,22 @@ function cancelresv(id) {
 }
 
 function getallresv() {
-  getAll();
-  $.ajax({
-    type: "post",
-    url: "user/getallresv.do",
-    dataType: "json",
+ // getAll();
+ $.ajax({
+  type: "get",
+  url: "https://api.myjson.com/bins/t0op6",
+  dataType: "json",
 
-    success: function(data) {
-      if (data != null) {
-        let table = "";
-        $.each(data, function(num) {
-          table +=
-            "<tr><td class=" +
-            '"' +
-            data[num].resvid +
-            '">' +
-            data[num].id +
-            "</td><td class=" +
-            '"' +
-            data[num].resvid +
-            '"' +
-            ">" +
-            data[num].name +
-            "</td><td class=" +
-            '"' +
-            data[num].resvid +
-            '"' +
-            ">" +
-            data[num].date +
-            "</td><td class=" +
-            '"' +
-            data[num].resvid +
-            '"' +
-            ">" +
-            data[num].begintime +
-            "--" +
-            data[num].endtime +
-            "</td><td><button onclick=\"cancelresv('" +
-            data[num].resvid +
-            "')\"> 取消 </button></td></tr>";
-        });
-        $("#tbody").html(table);
-      }
-    },
-    error: function() {
-      // alert("error");
+  success: function(data) {
+    for(i = 0;i<5;i++){
+      console.log(data[i].resvid);
     }
-  });
+    displayList(data,rows,current_page);
+    SetupPagination(data,pagination_element,rows);
+    
+  }
+});
+  
 }
 
 function venuelist() {
@@ -270,25 +239,7 @@ function venuelist() {
   });
 }
 
-function getAll() {
-  $.ajax({
-    type: "get",
-    url: "https://api.myjson.com/bins/t0op6",
-    dataType: "json",
 
-    success: function(data) {
-      for(i = 0;i<5;i++){
-        console.log(data[i].resvid);
-      }
-      displayList(data,rows,current_page);
-      SetupPagination(data,pagination_element,rows);
-      
-    }
-  });
-  
-
-
-}
 
 let current_page = 1;
 let rows = 6;
